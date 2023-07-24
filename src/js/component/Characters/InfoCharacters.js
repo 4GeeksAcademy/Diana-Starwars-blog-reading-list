@@ -1,0 +1,35 @@
+import React from 'react';
+import { useState, useEffect } from "react";
+import { Link, useParams } from 'react-router-dom';
+
+const InfoCharacter = () => {
+    const [character, setCharacter] = useState({})
+    const params = useParams();
+    
+    useEffect(() => {
+        fetch("https://www.swapi.tech/api/people/" + params.idCard).then((response) => response.json()).then((data)=>
+        {   setCharacter(data.result.properties
+            )
+            console.log(data.result.properties
+                )}
+        
+        ).catch(err=>err)}, [])
+
+
+
+    return (
+        <div>
+            <p>
+                Hola, mi id es: {params.idCard} y mi nombre es {character.name} 
+            </p>
+            <img src={`https://starwars-visualguide.com/assets/img/characters/${params.idCard}.jpg`} />
+            <Link to="/">
+                <span className="btn btn-primary btn-lg" role="button">
+                    TEMPORAL LINK TO HOME
+                </span>
+            </Link>
+        </div>
+    )
+}
+
+export default InfoCharacter

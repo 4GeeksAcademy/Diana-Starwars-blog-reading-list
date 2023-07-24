@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 
-const Card = ({ character }) => {
+const CardCharacters = ({ character }) => {
   //  const params = useParams();
   //  fetch().then.then.catch()
   const { id, name, description1, description2, description3, image } = character;
@@ -31,4 +31,4 @@ const Card = ({ character }) => {
   )
 };
 
-export default Card
+export default CardCharacters
