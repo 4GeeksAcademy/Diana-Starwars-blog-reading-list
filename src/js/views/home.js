@@ -2,7 +2,9 @@ import React from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 import { Link, useParams } from "react-router-dom";
 import CharacterCards from "./characterCards.js";
+
 import "../../styles/home.css";
+
 
 export const Home = () => {
 

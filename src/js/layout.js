@@ -10,6 +10,7 @@ import injectContext from "./store/appContext";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import Card from "./component/Card";
+import CardInfo from "./component/CardInfo";
 
 
 //create your first component
@@ -28,7 +29,7 @@ const Layout = () => {
 						<Route path="/demo" element={<Demo />} />
 						<Route path="/single/:theid" element={<Single />} />
 						<Route path="*" element={<h1>Not found!</h1>} />
-						<Route path="/Tarjeta/:idCard" element={<Card/>} />
+						<Route path="/Tarjeta/:idCard" element={<CardInfo/>} />
 
 					</Routes>
 					<Footer />
