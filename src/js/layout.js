@@ -10,7 +10,8 @@ import injectContext from "./store/appContext";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import CardCharacters from "./component/Characters/InfoCharacters";
-
+import CardPlanets from "./component/Planets/InfoPlanets";
+import CardVehicles from "./component/Vehicles/InfoVehicles";
 
 //create your first component
 const Layout = () => {
@@ -28,7 +29,10 @@ const Layout = () => {
 						<Route path="/demo" element={<Demo />} />
 						<Route path="/single/:theid" element={<Single />} />
 						<Route path="*" element={<h1>Not found!</h1>} />
-						<Route path="/Tarjeta/:idCard" element={<CardCharacters/>} />
+						<Route path="/Personajes/:idCard" element={<CardCharacters/>} />
+						<Route path="/Planetas/:idCard" element={<CardPlanets/>} />
+						<Route path="/Vehiculos/:idCard" element={<CardVehicles/>} />
+
 					</Routes>
 					<Footer />
 				</ScrollToTop>

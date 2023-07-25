@@ -20,7 +20,7 @@ const CardCharacters = ({ character }) => {
           <p className="card-text">
             {description3}
           </p>
-          <Link to={`/Tarjeta/${id}`}>
+          <Link to={`/Personajes/${id}`}>
             <span className="btn btn-primary btn-lg" role="button">
               Click here to know more!
             </span>
